@@ -16,7 +16,7 @@ while($mostrar = mysqli_fetch_array($querybuscar))
 ?>
 <html>
 <head>    
-		<title>VaidrollTeam</title>
+		<title>Todolist</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="style.css">
 </head>
@@ -30,22 +30,22 @@ while($mostrar = mysqli_fetch_array($querybuscar))
                 <td><input type="text" name="txtcodigo" value="<?php echo $codigo;?>" required ></td>
             </tr>
             <tr> 
-                <td>Nombre</td>
+                <td>Nombre de tarea</td>
                 <td><input type="text" name="txtnombre" value="<?php echo $nombre;?>" required></td>
             </tr>
             <tr> 
-                <td>Correo</td>
+                <td>Descripción de tarea</td>
                 <td><input type="text" name="txtcorreo" value="<?php echo $correo;?>" required></td>
             </tr>
             <tr> 
-                <td>Teléfono</td>
+                <td>#</td>
                 <td><input type="text" name="txttelefono" value="<?php echo $telefono;?>"required></td>
             </tr>
             <tr>
 				
                 <td colspan="2">
 				<a href="index.php">Cancelar</a>
-				<input type="submit" name="btnmodificar" value="Modificar" onClick="javascript: return confirm('¿Deseas modificar a este usuario?');">
+				<input type="submit" name="btnmodificar" value="Editar" onClick="javascript: return confirm('¿Deseas modificar a este usuario?');">
 				</td>
             </tr>
         </table>
