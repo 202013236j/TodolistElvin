@@ -4,19 +4,19 @@ include_once("conexion.php");
 <!--Busca por VaidrollTeam para más proyectos. -->
 <html>
 <head>    
-		<title>VaidrollTeam</title>
+		<title>Software2</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <table>
-	<img src="logo.png">
+	
 			
 		<form method="POST">
 		
 		</form>
 		</div>
-			<tr><th colspan="5"><h1>LISTAR DE TAREAS</h1><th><a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a></th></tr>
+			<tr><th colspan="5"><h1>APLICACION TODOLIST</h1><th><a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a></th></tr>
 			<tr>
 		    <th>Código</th>
             <th>Nombre de la tarea</th>
@@ -62,23 +62,23 @@ function cancelarform() {
 <div class="caja_popup" id="formregistrar">
   <form action="agregar.php" class="contenedor_popup" method="POST">
         <table>
-		<tr><th colspan="2">Agragra nueva tarea</th></tr>
+		<tr><th colspan="2">Agregar nueva tarea</th></tr>
             <tr> 
                 <td>Nombre de tarea</td>
-                <td><input type="text" name="txtnombre" required></td>
+                <td><input type="text" name="txtnombre" ></td>
             </tr>
             <tr> 
                 <td>Descripción de la tarea</td>
-                <td><input type="text" name="txtcorreo" required></td>
+                <td><input type="text" name="txtcorreo" ></td>
             </tr>
             <tr> 
                 <td>#</td>
-                <td><input type="number" name="txttelefono" required></td>
+                <td><input type="number" name="txttelefono" ></td>
             </tr>
             <tr> 	
                <td colspan="2">
-				   <button type="button" onclick="cancelarform()">Cancelar</button>
-				   <input type="submit" name="btnregistrar" value="Registrar" onClick="javascript: return confirm('¿Deseas registrar a este usuario?');">
+				   <button type="button" onclick="cancelarform()">Anular</button>
+				   <input type="submit" name="btnregistrar" value="Añadir" onClick="javascript: return confirm('¿Deseas registrar a este usuario?');">
 			</td>
             </tr>
         </table>
