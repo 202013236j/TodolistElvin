@@ -1,7 +1,7 @@
 <?php
 include_once("conexion.php"); 
 ?>
-<!--Busca por VaidrollTeam para más proyectos. -->
+
 <html>
 <head>    
 		<title>Software2</title>
