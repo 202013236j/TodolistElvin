@@ -10,18 +10,22 @@ include_once("conexion.php");
 </head>
 <body>
     <table>
-	
-			
+	<img src="logo.png">
+			<div id="barrabuscar">
 		<form method="POST">
-		
+		<input type="submit" value="Buscar" name="btnbuscar"><input type="text" name="txtbuscar" id="cajabuscar" placeholder="&#128270;Ingresar nombre de usuario">
 		</form>
+			
+		
+		
+		
 		</div>
-			<tr><th colspan="5"><h1>APLICACION TODOLIST</h1><th><a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a></th></tr>
+			<tr><th colspan="5"><h1>PROYECTO FINAL: APLICACION TODOLIST</h1><th><a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a></th></tr>
 			<tr>
 		    <th>Código</th>
-            <th>Nombre de la tarea</th>
-            <th>Descripción de la tarea</th>
-            <th>#</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>dni</th>
             
 			</tr>
         <?php 
@@ -29,7 +33,7 @@ include_once("conexion.php");
 if(isset($_POST['btnbuscar']))
 {
 $buscar = $_POST['txtbuscar'];
-$queryusuarios = mysqli_query($conn, "SELECT cod,nom,correo,tel FROM usuarios where nom like '".$buscar."%'");
+$queryusuarios = mysqli_query($conn, "SELECT cod,nom,correo,dni FROM usuarios where nom like '".$buscar."%'");
 }
 else
 {
@@ -40,10 +44,10 @@ $queryusuarios = mysqli_query($conn, "SELECT * FROM usuarios ORDER BY cod asc");
 		{    $numerofila++;    
             echo "<tr>";
 			echo "<td>".$numerofila."</td>";
-            
+            //echo "<td>".$mostrar['cod']."</td>";
             echo "<td>".$mostrar['nom']."</td>";
             echo "<td>".$mostrar['correo']."</td>";    
-			echo "<td>".$mostrar['tel']."</td>";  
+			//echo "<td>".$mostrar['dni']."</td>";  
             echo "<td style='width:26%'><a href=\"editar.php?cod=$mostrar[cod]\">Modificar</a> | <a href=\"eliminar.php?cod=$mostrar[cod]\" onClick=\"return confirm('¿Estás seguro de eliminar a $mostrar[nom]?')\">Eliminar</a></td>";           
 }
         ?>
@@ -64,16 +68,16 @@ function cancelarform() {
         <table>
 		<tr><th colspan="2">Agregar nueva tarea</th></tr>
             <tr> 
-                <td>Nombre de tarea</td>
+                <td>Nombre</td>
                 <td><input type="text" name="txtnombre" ></td>
             </tr>
             <tr> 
-                <td>Descripción de la tarea</td>
+                <td>Correo</td>
                 <td><input type="text" name="txtcorreo" ></td>
             </tr>
             <tr> 
-                <td>#</td>
-                <td><input type="number" name="txttelefono" ></td>
+                <td>dni</td>
+                <td><input type="number" name="txtdni" ></td>
             </tr>
             <tr> 	
                <td colspan="2">
