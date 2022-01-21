@@ -11,7 +11,7 @@ while($mostrar = mysqli_fetch_array($querybuscar))
     $codigo = $mostrar['cod'];
     $nombre = $mostrar['nom'];
     $correo = $mostrar['correo'];
-	$telefono = $mostrar['tel'];
+	$dni = $mostrar['dni'];
 }
 ?>
 <html>
@@ -38,8 +38,8 @@ while($mostrar = mysqli_fetch_array($querybuscar))
                 <td><input type="text" name="txtcorreo" value="<?php echo $correo;?>" required></td>
             </tr>
             <tr> 
-                <td>#</td>
-                <td><input type="text" name="txttelefono" value="<?php echo $telefono;?>"required></td>
+                <td>dni</td>
+                <td><input type="text" name="txtdni" value="<?php echo $dni;?>"required></td>
             </tr>
             <tr>
 				
@@ -62,9 +62,9 @@ while($mostrar = mysqli_fetch_array($querybuscar))
 	
 	$nombre1 	= $_POST['txtnombre'];
     $correo1 	= $_POST['txtcorreo'];
-    $telefono1 	= $_POST['txttelefono']; 
+    $dni1 	= $_POST['txtdni']; 
       
-    $querymodificar = mysqli_query($conn, "UPDATE usuarios SET nom='$nombre1',correo='$correo1',tel='$telefono1' WHERE cod=$codigo1");
+    $querymodificar = mysqli_query($conn, "UPDATE usuarios SET nom='$nombre1',correo='$correo1',dni='$dni1' WHERE cod=$codigo1");
 
   	echo "<script>window.location= 'index.php' </script>";
     

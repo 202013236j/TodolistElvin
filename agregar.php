@@ -2,9 +2,9 @@
     
     $nombre 	= $_POST['txtnombre'];
     $correo 	= $_POST['txtcorreo'];
-    $telefono 	= $_POST['txttelefono'];
+    $dni 	= $_POST['txtdni'];
     
-	mysqli_query($conn, "INSERT INTO usuarios(nom,correo,tel) VALUES('$nombre','$correo','$telefono')");
+	mysqli_query($conn, "INSERT INTO usuarios(nom,correo,tel) VALUES('$nombre','$correo','$dni')");
     
 header("Location:index.php");
 	

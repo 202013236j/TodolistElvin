@@ -6,7 +6,7 @@ CREATE TABLE `usuarios` (
   `cod` int(50) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `tel` int(11) NOT NULL
+  `dni` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `usuarios`
@@ -15,7 +15,7 @@ ALTER TABLE `usuarios`
   ALTER TABLE `usuarios`
   MODIFY `cod` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32448;
   
-  INSERT INTO `usuarios` (`cod`, `nom`, `correo`, `tel`) VALUES
+  INSERT INTO `usuarios` (`cod`, `nom`, `correo`, `dni`) VALUES
 (32412, 'Tarea 1', 'Descripción de la tarea', 2021),
 (32413, 'Tarea 2', 'Descripción de la tarea', 2021),
 (32414, 'Tarea 3', 'Descripción de la tarea', 2021),
