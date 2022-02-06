@@ -1,21 +1,21 @@
 <?php
 include('conexion.php');
-$nombre=$_POST['nombre'];
+$nom=$_POST['nom'];
 $cod=$_POST['cod'];
 session_start();
-$_SESSION['nombre']=$nombre;
+$_SESSION['nom']=$nom;
 
 
-$conexion=mysqli_connect("localhost","root","","TodoList");
+//$conn = new mysqli("localhost","root","","TodoList");
 
-$consulta="SELECT*FROM nombre where nombre='$nombre' and cod='$cod";
+$consulta="SELECT*FROM usuarios where nom='$nom' and cod='$cod";
 $resultado=mysqli_query($conexion,$consulta);
 
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
   
-    header("location:home.php");
+    header("location:index.php");
 
 }else{
     ?>

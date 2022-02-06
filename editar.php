@@ -11,12 +11,12 @@ while($mostrar = mysqli_fetch_array($querybuscar))
     $codigo = $mostrar['cod'];
     $nombre = $mostrar['nom'];
     $correo = $mostrar['correo'];
-	$dni = $mostrar['dni'];
+	$telefono = $mostrar['tel'];
 }
 ?>
 <html>
 <head>    
-		<title>Todolist</title>
+		<title>ProyectoFinal</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="style.css">
 </head>
@@ -30,22 +30,22 @@ while($mostrar = mysqli_fetch_array($querybuscar))
                 <td><input type="text" name="txtcodigo" value="<?php echo $codigo;?>" required ></td>
             </tr>
             <tr> 
-                <td>Nombre de tarea</td>
+                <td>Nombre</td>
                 <td><input type="text" name="txtnombre" value="<?php echo $nombre;?>" required></td>
             </tr>
             <tr> 
-                <td>Descripción de tarea</td>
+                <td>Correo</td>
                 <td><input type="text" name="txtcorreo" value="<?php echo $correo;?>" required></td>
             </tr>
             <tr> 
-                <td>dni</td>
-                <td><input type="text" name="txtdni" value="<?php echo $dni;?>"required></td>
+                <td>Teléfono</td>
+                <td><input type="text" name="txttelefono" value="<?php echo $telefono;?>"required></td>
             </tr>
             <tr>
 				
                 <td colspan="2">
 				<a href="index.php">Cancelar</a>
-				<input type="submit" name="btnmodificar" value="Editar" onClick="javascript: return confirm('¿Deseas modificar a este usuario?');">
+				<input type="submit" name="btnmodificar" value="Modificar" onClick="javascript: return confirm('¿Deseas modificar a este usuario?');">
 				</td>
             </tr>
         </table>
@@ -62,11 +62,12 @@ while($mostrar = mysqli_fetch_array($querybuscar))
 	
 	$nombre1 	= $_POST['txtnombre'];
     $correo1 	= $_POST['txtcorreo'];
-    $dni1 	= $_POST['txtdni']; 
+    $telefono1 	= $_POST['txttelefono']; 
       
-    $querymodificar = mysqli_query($conn, "UPDATE usuarios SET nom='$nombre1',correo='$correo1',dni='$dni1' WHERE cod=$codigo1");
+    $querymodificar = mysqli_query($conn, "UPDATE usuarios SET nom='$nombre1',correo='$correo1',tel='$telefono1' WHERE cod=$codigo1");
 
   	echo "<script>window.location= 'index.php' </script>";
     
 }
 ?>
+	

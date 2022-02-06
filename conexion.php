@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost","root","","Todolist");
+$conn = new mysqli("localhost","root","","TodoList");
 	
 	if($conn->connect_errno)
 	{
