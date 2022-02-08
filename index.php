@@ -66,7 +66,7 @@ function cancelarform() {
 <div class="caja_popup" id="formregistrar">
   <form action="agregar.php" class="contenedor_popup" method="POST">
         <table>
-		<tr><th colspan="2">Agregar nueva tarea</th></tr>
+		<tr><th colspan="2">Agregar nuevo usuario</th></tr>
             <tr> 
                 <td>Nombre</td>
                 <td><input type="text" name="txtnombre" ></td>
