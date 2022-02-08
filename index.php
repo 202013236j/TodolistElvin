@@ -20,7 +20,7 @@ include_once("conexion.php");
 		
 		
 		</div>
-			<tr><th colspan="5"><h1>PROYECTO FINAL: APLICACION TODOLIST</h1><th><a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a></th></tr>
+			<tr><th colspan="5"><h1>PROYECTO FINAL: APLICACION TODOLIST..</h1><th><a style="font-weight: normal; font-size: 14px;" onclick="abrirform()">Agregar</a></th></tr>
 			<tr>
 		    <th>Código</th>
             <th>Nombre</th>
