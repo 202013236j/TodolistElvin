@@ -6,7 +6,7 @@ session_start();
 $_SESSION['nom']=$nom;
 
 
-//$conn = new mysqli("localhost","root","","TodoList");
+$conn = new mysqli("localhost","root","","TodoList");
 
 $consulta="SELECT*FROM usuarios where nom='$nom' and cod='$cod";
 $resultado=mysqli_query($conexion,$consulta);
@@ -15,7 +15,7 @@ $filas=mysqli_num_rows($resultado);
 
 if($filas){
   
-    header("location:index.php");
+    header("location:index.html");
 
 }else{
     ?>
@@ -26,5 +26,5 @@ if($filas){
   <h1 class="bad">ERROR DE AUTENTIFICACION</h1>
   <?php
 }
-mysqli_free_result($resultado);
+//mysqli_free_result($resultado);
 mysqli_close($conexion);
